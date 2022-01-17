@@ -1,0 +1,173 @@
+/********************POLICE********************/
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('polices/poppins-medium-webfont.woff2') format('woff2'),
+         url('polices/poppins-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Abril_Fatface';
+    src: url('polices/abrilfatface-regular-webfont.woff2') format('woff2'),
+         url('polices/abrilfatface-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*********************BASE*********************/
+
+body {
+    font-family: Poppins, sans-serif;
+    background-color: #4B69A6;
+}
+
+article, header, footer {
+    color: #FFF;
+    background-color: #A49CD9;
+}
+
+
+/********************HEADER********************/
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header div {
+    display: flex;
+}
+
+header div img {
+    vertical-align: middle;
+}
+
+h1 {
+    color: #FFF;
+    font-family: Abril_Fatface, serif;
+    font-size: 2.5em;
+}
+
+
+/*********************NAV**********************/
+
+nav a:link, nav a:visited {
+    display: block;
+    color: #FFF;
+}
+
+
+li {
+    display: inline;
+    list-style: none;
+    text-align: center;
+    float: left;
+    padding: 8px;
+    border-right: 1px solid #4B69A6;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+
+/*********************MAIN*********************/
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    color: #A49CD9;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Abril_Fatface, serif;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+article {
+    margin: 2em 5em;
+    padding: 1em;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+article h3 {
+    text-align: center;
+    font-family: Abril_Fatface, serif;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+article figure {
+    vertical-align: middle;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.sect_volets {
+    display: flex;
+}
+
+section > figure {
+    align-items: center;
+}
+
+.produit div figure, .art_volets figure {
+    display: none;
+}
+
+
+/********************FOOTER********************/
+
+footer {
+    margin: 2em 5em;
+    padding: 1em;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+footer > article {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*****************RESPONSIVITÉ*****************/
+
+@media screen and (max-width: 1280px) {
+    section > figure {
+        display: none;
+    }
+
+    .art_volets {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2em 3em;
+    }
+
+    .produit div {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .produit div figure, .art_volets figure {
+        display: block;
+    }
+
+    .produit > figure {
+        display: none;
+    }
+}
